@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+  <div class="container-fluid">
+    <img src="assets\images\Watch Your Property.png" alt="" width="90" height="90"
+      class="d-inline-block align-text-top">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-link" routerLink="/homeService" routerLinkActive="active">
+          Home
+        </li>
+        <li class="nav-link" routerLink="/createService" routerLinkActive="active" *ngIf="!Try()">
+          Request a Service
+        </li>
+        <li class="nav-link" routerLink="/displayService" routerLinkActive="active">
+          Active Services
+        </li>
+        <li><a class="nav-link" routerLink="/register" *ngIf="!ServiceRequest()">Register</a></li>
+        <li><a class="nav-link" routerLink="/login" *ngIf="!ServiceRequest()">Login</a></li>
+        <li><a class="nav-link" routerLink="/logout" *ngIf="ServiceRequest()">Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>

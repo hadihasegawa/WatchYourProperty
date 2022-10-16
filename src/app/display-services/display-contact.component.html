@@ -1,0 +1,20 @@
+<div style="text-align:center">
+    <h1>List of Request</h1>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>SERVICE TYPE</th>
+            <TH>DESCRIBE</TH>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let c of listOfServices;">
+            <td>{{c.service_type}}</td>
+            <td>{{c.describe}}</td>
+            <button type="button" (click)="update(c._id)">Update</button>
+            <button type="button" (click)="delete(c._id)">Delete</button>
+        </tr>
+    </tbody>
+</table>

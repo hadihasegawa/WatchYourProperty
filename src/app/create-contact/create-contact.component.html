@@ -1,0 +1,38 @@
+<div class=body style="text-align:center">
+    <h1>Request a Service
+    </h1>
+</div>
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6col-sm-offset-3">
+                <label for="cars">Choose a Service:</label>
+                <select formControlName="service_type" id="service_type" name="service_type">
+                    <option value="Cleaning">Cleaning</option>
+                    <option value="Electrician">Electrician</option>
+                    <option value="Plumbing">Plumbing</option>
+                    <option value="Aircondition Service">Aircondition Service</option>
+                    <option value="Wifi Service">Wifi Service</option>
+                    <option value="Home Light Service">Home Light Service</option>
+                    <option value="Corridor Light Service"disabled>Corridor Light Service</option>
+                    <option value="Fridge Service"disabled>Fridge Service</option>
+
+                </select>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6col-sm-offset-3">
+                <p><input formControlName="describe" id="describe" placeholder="Describe the issue"></p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-sm-6col-sm-offset-3">
+                <p><button class="btn btn-primary" type="submit">Request</button></p>
+            </div>
+            
+
+        </div>
+    </div>
+</form>
